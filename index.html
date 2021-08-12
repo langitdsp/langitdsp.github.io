@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>langitdsp</title>
+
+    <!-- Necessary component -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="jumbotron text-center">
+        <h1>Welcome</h1>
+        <p>Resize this responsive page to see the effect!</p>
+    </div>
+
+    <div class="container" id="app">
+        <div class="row">
+			
+			<div class="col-sm-3">
+				<a href="https://www.w3schools.com/"></a>
+					<div>
+						<h3> {{ data[0].title }} </h3>
+						<p> {{ data[0].description }} </p>
+					</div>					
+				</a>
+			</div>			
+          <div class="col-sm-3">
+            <h3> {{ data[1].title }} </h3>
+            <p> {{ data[1].description }} </p>
+          </div>
+          <div class="col-sm-3">
+            <h3> {{ data[2].title }} </h3>
+            <p> {{ data[2].description }} </p>
+          </div>
+		  <div class="col-sm-3">
+            <h3> {{ data[3].title }} </h3>
+            <p> {{ data[3].description }} </p>
+          </div>
+        </div>
+      </div>
+    
+    <!--Data binding -->
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: { data: [
+                        {
+                            title: "Instagram",
+                            description: "@langitdsp",
+                            link: "https://www.instagram.com/langitdsp/"
+                        },
+                        {
+                            title: "Twitter",
+                            description: "@langitdsp",
+                            link: "https://www.twitter.com/langitdsp/"
+                        },
+                        {
+                            title: "LinkedIn",
+                            description: "@langitdsp",
+                            link: "https://www.linkedin.com/in/langitdsp/"
+                        },
+                        {
+                            title: "Github",
+                            description: "@langitdsp",
+                            link: "https://www.github.com/langitdsp/"
+                        }
+                        
+
+                    ]
+                }
+        })
+    </script>
+</body>
+</html>
